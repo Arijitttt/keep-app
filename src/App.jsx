@@ -32,8 +32,9 @@ const onDelete = (id) =>{
      passNote = {addNote}
      />
      
+<div className="noteRoot">
 
-    {addItem.map((val,index)=>{
+{addItem.map((val,index)=>{
       return(
         <Note
         key = {index}
@@ -45,7 +46,11 @@ const onDelete = (id) =>{
       )
     })}
 
-     <Footer/>
+</div>
+  <div className="footer">
+  <Footer/>
+  </div>
+    
      
     </>
   )

@@ -8,7 +8,7 @@ export default function Header() {
     <div className="header">
         <div className="left">
         <img src={img} alt="" />
-        <h2>Keep App</h2>        
+        <p>Keep App</p>        
         </div>
     </div>
     

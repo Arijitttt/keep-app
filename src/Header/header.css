@@ -1,11 +1,13 @@
 .header{
     background-color: rgb(237, 237, 50);
     width: 100%;
+    box-shadow: -14px 24px 16px 0px rgba(0,0,0,0.1);
     
 }
 .left{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
 }
 .left img{
     object-fit: cover;
@@ -14,3 +16,18 @@
     border-radius: 10px;
     margin-right: 8px;
 }
+.left p{
+    
+    font-size: 24px;
+    animation: example 2s ease-in-out infinite;
+    
+}
+@keyframes example {
+    0% { 
+    letter-spacing: 1px;
+    }
+    /* 50% { 
+         letter-spacing: 2px;} */
+    100% { 
+        letter-spacing: 5px;}
+  }

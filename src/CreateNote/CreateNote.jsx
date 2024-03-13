@@ -5,6 +5,8 @@ import './createnote.css';
 export default function CreateNote(props) {
   const [note, setNote] = useState({ title: "", content: "" });
 
+  const [expand,setExpand]=useState(false)
+
   const handleInputChange = (event) => {
     const { name, value } = event.target;
 
@@ -26,10 +28,17 @@ export default function CreateNote(props) {
     props.passNote(note)
     setNote({ title: "", content: "" })
   }
-
+  const expandIt = ()=>{
+    setExpand(true)
+  }
+  const normal = ()=>{
+    setExpand(false)
+  }
   return (
     <div className="main_note">
       <form onSubmit={handleSubmit}>
+
+        {expand?
         <input
           type="text"
           autoComplete="on"
@@ -37,7 +46,7 @@ export default function CreateNote(props) {
           placeholder="Title"
           value={note.title}
           onChange={handleInputChange}
-        />
+        /> :null}
 
         <textarea
           name="content"
@@ -46,9 +55,12 @@ export default function CreateNote(props) {
           cols="30"
           rows="10"
           placeholder="Write a note..."
+          onClick={expandIt}
+          onDoubleClick={normal}
         ></textarea>
 
-        <button type="submit" onClick={addEvent}><IoAddOutline /></button>
+{expand?
+        <button type="submit" onClick={addEvent}><IoAddOutline /></button> :null}
       </form>
     </div>
   );
