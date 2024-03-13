@@ -8,13 +8,36 @@ import CreateNote from './CreateNote/CreateNote'
 import Note from './Note/Note'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [addItem, setAddItem] = useState([])
+
+  const addNote = (note) => {
+    console.log(note)
+    //alert('i am clicked')
+    setAddItem((prevNote) => {
+      return [...prevNote, note]
+    })
+    
+  }
 
   return (
     <>
      <Header/>
-     <CreateNote/>
-     <Note/>
+     <CreateNote 
+     passNote = {addNote}
+     />
+     
+
+    {addItem.map((val,index)=>{
+      return(
+        <Note
+        key = {index}
+        id = {index}
+        title = {val.title}
+        content = {val.content}
+        />
+      )
+    })}
+
      <Footer/>
      
     </>

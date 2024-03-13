@@ -1,13 +1,13 @@
 import React from 'react'
 import { MdFolderDelete } from "react-icons/md";
 import './note.css'
-export default function Note() {
+export default function Note( { title, content }) {
   return (
     <>
       <div className="note">
-        <h1>Title</h1>
+        <h1>{title}</h1>
         <br />
-        <p>Content</p>
+        <p>{content}</p>
         <button className='btn'>
         <MdFolderDelete className='deleteIcon'/>
         </button>
