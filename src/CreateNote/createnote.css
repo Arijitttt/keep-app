@@ -1,0 +1,48 @@
+.main_note{
+    
+    width: 500px;
+    height: auto;
+    margin: 10px auto;
+    box-shadow: -14px 24px 16px 0px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 3em;
+}
+.main_note form{
+    display: flex;
+    flex-direction: column;
+}
+.main_note form input{
+    border: none;
+    outline: none;
+    font-size: 35px;
+    padding-left: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    /* animation: example 5s ease infinite; */
+}
+
+.main_note form textarea{
+    border: none;
+    resize: none;
+    height: 100px;
+    outline: none;
+    margin-top: 20px;
+}
+.main_note form button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 25px;
+    color: rgb(237, 237, 50);
+    margin-top: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px;
+}
+@keyframes example {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.5; letter-spacing: 2px;}
+    100% { opacity: 0.7; letter-spacing: 5px;}
+  }

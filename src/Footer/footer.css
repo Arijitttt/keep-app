@@ -1,7 +1,8 @@
 footer{
-    background-color: rgb(237, 237, 50);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 50px;
+    letter-spacing: 2px;
 }
