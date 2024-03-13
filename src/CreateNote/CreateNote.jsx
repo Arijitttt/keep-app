@@ -24,6 +24,7 @@ export default function CreateNote(props) {
 
   const addEvent = () => {
     props.passNote(note)
+    setNote({ title: "", content: "" })
   }
 
   return (

@@ -18,7 +18,13 @@ function App() {
     })
     
   }
-
+const onDelete = (id) =>{
+  setAddItem((oldData)=>{
+    return oldData.filter((arrElem,index)=>{
+      return index !== id
+    })
+  })
+}
   return (
     <>
      <Header/>
@@ -34,6 +40,7 @@ function App() {
         id = {index}
         title = {val.title}
         content = {val.content}
+        deleteItem = {onDelete}
         />
       )
     })}
